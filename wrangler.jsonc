@@ -1,0 +1,60 @@
+{
+  // Cloudflare Workers Configuration for Next.js GSAP Scroll Project
+  "name": "gsscroll",
+  "type": "module",
+  "main": ".wrangler/tmp/index.js",
+  "compatibility_date": "2025-01-05",
+  
+  // Build configuration for Next.js
+  "build": {
+    "command": "npm run build",
+    "cwd": "./",
+    "watch_paths": ["src/**/*.{js,jsx,ts,tsx,json,css}"]
+  },
+
+  // Environment configuration
+  "env": {
+    "development": {
+      "name": "gsscroll-dev",
+      "routes": [
+        {
+          "pattern": "localhost:8787/*",
+          "zone_name": "example.com"
+        }
+      ]
+    },
+    "production": {
+      "name": "gsscroll-prod",
+      "routes": [
+        {
+          "pattern": "gsscroll.example.com/*",
+          "zone_name": "example.com"
+        }
+      ]
+    }
+  },
+
+  // Cloudflare Pages or Workers configuration
+  "site": {
+    "bucket": ".next/static"
+  },
+
+  // Compatibility settings
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+
+  // Custom domain (optional - update with your domain)
+  "routes": [
+    {
+      "pattern": "example.com/*",
+      "zone_name": "example.com"
+    }
+  ],
+
+  // Observability and logging
+  "logpush": false,
+
+  // Analytics Engine (optional)
+  "analytics_engine_datasets": []
+}
