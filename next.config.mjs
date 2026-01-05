@@ -1,9 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "standalone",
-  experimental: {
-    runtime: "edge"
-  }
-};
+const nextConfig = {};
 
 module.exports = nextConfig;
