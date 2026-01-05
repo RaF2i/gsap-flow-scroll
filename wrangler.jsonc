@@ -1,7 +1,0 @@
-{
-  // Cloudflare Pages Configuration for Next.js
-  "name": "gsscroll",
-  "pages_build_output_dir": ".vercel/output/static",
-  "compatibility_date": "2025-01-05",
-  "compatibility_flags": ["nodejs_compat"]
-}

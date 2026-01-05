@@ -118,8 +118,8 @@ export default function Home() {
   return (
     <>
       <ReactLenis root>
-        <section className="hero">
-          <div className="img absolute left-[38%] ">
+        <section className="hero p-10 mt-10">
+          <div className="img "> 
             <img className="w-[50%]  rounded-full" src="/img.webp" alt="img" />
           </div>
         </section>
